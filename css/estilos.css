@@ -1,0 +1,48 @@
+/* Maps */
+.fuente_blanco {
+  color: white; }
+
+.fuente_Negro {
+  color: black; }
+
+.fuente_gris {
+  color: gray; }
+
+.fondo_blanco {
+  background-color: white;
+  width: 450px;
+  border-radius: 10px; }
+
+.fondo_Negro {
+  background-color: black;
+  width: 450px;
+  border-radius: 10px; }
+
+.fondo_gris {
+  background-color: gray;
+  width: 450px;
+  border-radius: 10px; }
+
+.Estilo1, .Estilo2, .estilo3 {
+  color: black;
+  font-size: 24px;
+  padding: 30px;
+  width: 750px;
+  font-family: Arial;
+  text-decoration: underline; }
+
+/* Extend */
+.Estilo2, .estilo3 {
+  border-width: 3px;
+  font-size: 20px;
+  color: gray;
+  padding: 20px;
+  font-weight: bold; }
+
+.estilo3 {
+  width: 600px;
+  height: 100px;
+  font-size: 24px;
+  color: black;
+  background-color: pink;
+  border-radius: 30px; }

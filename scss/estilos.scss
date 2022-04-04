@@ -1,0 +1,66 @@
+
+/* Maps */
+$color_fuente:(blanco:white, Negro:black,gris:gray );
+$color_fondo:(blanco:white, Negro:black,gris:gray );
+
+
+@each $a, $b, $c in $color_fuente {
+    .fuente_#{$a} {
+        color:$b;
+                }
+}
+
+@each $a, $b, $c in $color_fondo {
+    .fondo_#{$a} {
+        background-color:$b;
+        width: 450px;
+        border-radius: 10px;
+        }
+}
+
+$consejos: (
+    color: black,
+    Fuente: 24px,
+    Letra: Arial,
+    Tamano: 750px,
+    Alineacion:30px,
+    Subrayado: underline,
+    );
+
+.Estilo1{
+    color: map-get($consejos, color);
+    font-size: map-get($consejos, Fuente );
+    padding: map-get($consejos, Alineacion );
+    width: map-get($consejos, Tamano );
+    font-family: map-get($consejos, Letra );
+    text-decoration: map-get($consejos, Subrayado );;
+    
+}
+
+
+/* Extend */
+.Estilo2{
+@extend .Estilo1;
+        border-width: 3px;
+        font-size: 20px;
+        color: gray;
+        padding: 20px;
+        font-weight: bold;
+        }
+
+@mixin sizes($width, $height, $tamano_fuente, $color_fuente, $color_fondo, $borde ) {
+    width: $width;
+    height: $height;
+    font-size: $tamano_fuente;
+    color: $color_fuente;
+    background-color: $color_fondo;
+    border-radius: $borde;
+    
+
+}
+
+.estilo3 {
+    @extend .Estilo2;
+    @include sizes(600px, 100px, 24px, black, pink, 30px);
+
+}
